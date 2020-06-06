@@ -19,6 +19,7 @@ export default createLayoutsWidget('left-custom-html-two', {
       }
 
       scheduleOnce('afterRender', this, function() {
+        $("div.left-custom-html-two").html(''); // to clear the existing div
         $("div.left-custom-html-two").append(`<div class='contents'>${html}</div>`);
       });
       //state.renderScheduled = true;
